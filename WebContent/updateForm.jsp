@@ -36,7 +36,7 @@
 		이름(name) <input type="text" name="name" value="<%=phoneVo.getName()%>"> <br>
 		핸드폰(hp) <input type="text" name="hp" value="<%=phoneVo.getHp()%>"> <br>
 		회사번호(company) <input type="text" name="company" value="<%=phoneVo.getCompany()%>"> <br><br>
-	
+		<!-- 등록번호 type은 개발할 때 text로 두고 서비스할 때는 hidden으로 놓는다. -->
 		<button type="submit">수정</button>
 	</form>
 	
