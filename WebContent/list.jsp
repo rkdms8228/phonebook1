@@ -27,6 +27,10 @@
 	<%for(int i =0; i<phoneList.size(); i++) {%>
 		<table border="1">
 			<tr>
+				<td>등록번호(personId)</td>
+				<td>[ <%=phoneList.get(i).getPersonId()%>번 ]</td>
+			</tr>
+			<tr>
 				<td>이름(name)</td>
 				<td><%=phoneList.get(i).getName()%></td>
 			</tr>
@@ -40,15 +44,11 @@
 			</tr>
 			<tr>
 				<td>
-				<form action="updateForm.jsp" method="get">
-					<button type="submit" name="personId" value=<%=phoneList.get(i).getPersonId()%>>[수정]</button>
-				</form>
+					<a href="./updateForm.jsp?personId=<%=phoneList.get(i).getPersonId()%>">[수정]</a>
 				</td>
 				
 				<td>
-				<form action="delete.jsp" method="get">
-					<button type="submit" name="personId" value=<%=phoneList.get(i).getPersonId()%>>[삭제]</button>
-				</form>
+					<a href="./delete.jsp?personId=<%=phoneList.get(i).getPersonId()%>">[삭제]</a>
 				</td>
 			</tr>
 		</table>
