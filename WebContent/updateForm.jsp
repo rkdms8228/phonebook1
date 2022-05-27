@@ -31,7 +31,7 @@
 		아래 항목을 변경하고 "수정" 버튼을 클릭하세요.
 	</p>
 	
-	<form action="./insert.jsp" method="get">
+	<form action="./update.jsp" method="get">
 		등록번호(personId) <input type="text" name="personId" value="<%=phoneVo.getPersonId()%>"> <br>
 		이름(name) <input type="text" name="name" value="<%=phoneVo.getName()%>"> <br>
 		핸드폰(hp) <input type="text" name="hp" value="<%=phoneVo.getHp()%>"> <br>
