@@ -5,17 +5,19 @@
 <%@ page import="java.util.List"%>
 
 <%
-	//파라미터 값 가져오기
+	//파라미터 값 꺼내기
 	int personId = Integer.parseInt(request.getParameter("personId"));
 	String name = request.getParameter("name");
 	String hp = request.getParameter("hp");
 	String company = request.getParameter("company");
 	
-	//수정 값 받기
+	//PhoneVo 만들기
 	PhoneVo phoneVo = new PhoneVo(personId, name, hp, company);
 	
-	//PhoneDao 객체 만들기
+	//PhoneDao personUpdate()로 수정하기
 	PhoneDao phoneDao = new PhoneDao();
+	int count = phoneDao.personUpdate(phoneVo);
+	System.out.println(count);
 	
 	response.sendRedirect("./list.jsp");
 	
