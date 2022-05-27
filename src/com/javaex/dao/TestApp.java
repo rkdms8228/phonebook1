@@ -9,10 +9,14 @@ public class TestApp {
 	public static void main(String[] args) {
 		
 		PhoneDao phoneDao = new PhoneDao();
-		List<PhoneVo> phoneList = phoneDao.personSelect();
+		//List<PhoneVo> phoneList = phoneDao.personSelect();
 
-		 System.out.println(phoneList.toString());
+		//System.out.println(phoneList.toString());
 		
+		 
+		PhoneVo phoneVo = phoneDao.getPerson(1);
+		System.out.println(phoneVo);
+		 
 	}
 
 }
