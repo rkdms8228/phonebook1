@@ -32,6 +32,7 @@
 	</p>
 	
 	<form action="./update.jsp" method="get">
+	<!-- 개발할 때는 get방식으로 주소에 모든 정보가 뜨게 하지만 서비스를 할 때는 개인정보 유출이나 보안을 위해서 post 방식으로 한다. -->
 		등록번호(personId) <input type="text" name="personId" value="<%=phoneVo.getPersonId()%>"> <br>
 		이름(name) <input type="text" name="name" value="<%=phoneVo.getName()%>"> <br>
 		핸드폰(hp) <input type="text" name="hp" value="<%=phoneVo.getHp()%>"> <br>
